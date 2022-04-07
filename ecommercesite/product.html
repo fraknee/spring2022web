@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <title>the craft;</title>
+</head>
+
+<style>
+    body {
+        background-color: black;
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+    }
+
+    hr { 
+        display: block; 
+        height: 1px;
+        border: 0; 
+        border-top: 1px solid #ccc;
+        margin: 1em 0; 
+        padding: 0; }
+
+    h3 {
+        font-family: 'Bebas Neue', cursive;
+        color: rgb(183, 15, 15);
+        align-self: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    h4 {
+        color: white;
+        align-self: center;
+        margin-top: 5px;
+        font-weight: 300;
+        margin-bottom: 7px;
+        font-size: 20px;
+    }
+
+    h5 {
+        color: white;
+        align-self: center;
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+
+    html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
+
+    .white {
+        background-color: #ffffff;
+        content: center;
+    }
+
+    .displayed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    }
+
+    .title {
+        text-align: center;
+        color: black;
+        color: #ffffff;
+        font-family: 'Rubik Mono One', sans-serif;
+    }
+
+    .text {
+        text-align: center;
+        color: black;
+    }
+
+    .row-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content {
+        height: 100%;
+    } 
+
+    .navbar-brand {
+        padding-left: 90px;
+        font-size: 45px;
+        color: white;
+        font-family: 'Rubik Mono One', sans-serif;    }
+
+    .navbar-brand:hover {
+        color: rgb(148, 35, 35);
+    }
+
+    .nav-link {
+        font-size: 25px;
+        margin-right: 15px;
+        font-family: 'Bebas Neue', cursive;
+    }
+    
+/*items*/
+    .row-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        height: 100%;
+    } 
+
+    .x {
+        display: flex;
+        align-self: center;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        flex-direction: column;
+    }
+
+    .add-to-cart {
+        color: #000000;
+        width: 199px;
+        height: 27px;
+        align-self: center;
+        margin-top: 0px;
+        transition: 0.3s;
+        padding-top: 2px;
+        padding-left: 5px;
+        padding-right: 32px;
+        padding-bottom: 2px;
+        background-color: #ffffff;
+        font-family: 'ddaftt-lowercaddafttlowercase';
+    }
+    .add-to-cart:hover {
+        background-color: rgb(183, 15, 15);
+        color: white;
+    }
+
+    .atc-text {
+        margin-top: 10px;
+        margin-left: 30px;
+        font-size: 17px;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .shop {
+        width: 100%;
+        display: flex;
+        overflow: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .shop-goods {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+
+    .rows {
+        width: 703px;
+        display: flex;
+        justify-content: center;
+    }
+    .row2 {
+        width: 218px;
+        height: 390px;
+        display: flex;
+        padding: 15px;
+        min-height: 390px;
+        align-items: center;
+        flex-direction: column;
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .itemlisting {
+        width: 244px;
+        height: 584px;
+        display: flex;
+        transition: 0.3s;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .itemlisting:hover {
+        transform: scale(1.02);
+    }
+
+    .goodsimage {
+        width: 198px;
+        align-self: center;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+/*footer css*/
+    footer {
+        padding: 2em 0; 
+    }
+
+    .footer-one p {
+        color: rgb(167, 152, 152);;
+    }
+
+    .footer-one .footer-heading {
+        font-size: 30px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 30px; 
+    }
+
+    .footer-one .menu {
+        margin-bottom: 30px; 
+    }
+    
+    .footer-one .menu a {
+        color: rgb(167, 152, 152);
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px; 
+        font-family: 'Rubik Mono One', sans-serif;    }
+</style>
+<body>
+    
+<!-- logo + navigation -->
+<nav class="navbar navbar-expand-md navbar-dark bg-black">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="landing.html">the craft;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ms-auto mt-1 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: rgb(167, 152, 152); text-transform: uppercase;" href="product.html"><b>Shop</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: rgb(167, 152, 152); text-transform: uppercase;" href="faq.html"><b>FAQ</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: rgb(167, 152, 152); text-transform: uppercase;" href="blog.html"><b>Blog</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: rgb(167, 152, 152); text-transform: uppercase;" href="#"><b>Checkout</b></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- gap -->
+<br><br><br>
+
+<!-- tops title -->
+    <div class="row g-3 p-1">
+        <div class="col-sm-0 col-md-0 col-lg-2 side">
+        </div>
+        <div class="col-sm-5 col-md-5 col-lg-3 title">
+            <h1>tops</h1>
+        </div>
+        <div class="col-sm-7 col-md-7 col-lg-7 three">
+        </div>
+    </div>
+<br>
+
+<!-- top items -->
+<div class="shop">
+<div class="shop-goods">
+    <div class="rows">
+
+        <!-- top 1 -->
+        <div class="row2">
+        <div class="itemlisting">
+            <img alt="image" src="images/top1.png" class="goodsimage"/>
+            
+            <div class="x">
+                <h3>eloise</h3>
+                <h4>split front corset</h4>
+                <h5>$22.00</h5>
+            </div>
+
+            <button class="add-to-cart">
+            <span class="atc-text"><span>add to cart</span></span>
+            </button>
+        </div>
+        </div>
+
+        <!-- top 2 -->
+        <div class="row2">
+          <div class="itemlisting">
+            <img alt="image" src="images/top2.png" class="goodsimage"/>
+            <div class="x">
+              <h3>olivia</h3>
+              <h4>sheer long sleeve</h4>
+              <h5>$35.00</h5>
+            </div>
+
+            <button class="add-to-cart">
+            <span class="atc-text"><span>add to cart</span></span>
+            </button>
+        </div>
+        </div>
+
+        <!-- top 3 -->
+        <div class="row2">
+
+        <div class="itemlisting">
+            <img alt="image" src="images/top3.png" class="goodsimage"/>
+            <div class="x">
+              <h3>wendy</h3>
+              <h4>collared blouse</h4>
+              <h5>$20.00</h5>
+            </div>
+
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+        </div>
+        </div>
+    </div>
+    <div class="rows">
+    
+        <!-- top 4 -->
+        <div class="row2">
+          <div class="itemlisting">
+            <img alt="image" src="images/top4.png" class="goodsimage"/>
+            
+            <div class="x">
+              <h3>victoria</h3>
+              <h4>lace-up corset</h4>
+              <h5>$20.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- top 5-->
+        <div class="row2">
+    
+          <div class="itemlisting">
+            <img alt="image" src="images/top5.png" class="goodsimage"/>
+            <div class="x">
+              <h3>buffy</h3>
+              <h4>fleece button-up</h4>
+              <h5>$30.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- nonexistent -->
+        <div class="row2">
+    
+          <div class="itemlisting">
+
+          </div>
+        </div>
+    
+    </div>
+</div>
+</div>
+
+<!-- gap -->
+<br><br>
+<hr class="mb-6"/>
+<br><br>
+
+<!-- skirts title -->
+<div class="row g-3 p-1">
+    <div class="col-sm-0 col-md-0 col-lg-2 side">
+    </div>
+    <div class="col-sm-5 col-md-5 col-lg-3 title">
+        <h1>skirts</h1>
+    </div>
+    <div class="col-sm-7 col-md-7 col-lg-7 three">
+    </div>
+</div>
+<br>
+
+<!-- skirt items -->
+<div class="shop">
+<div class="shop-goods">
+    <div class="rows">
+    
+        <!-- skirt 1 -->
+        <div class="row2">
+          <div class="itemlisting">
+            <img alt="image" src="images/skirt1.png" class="goodsimage"/>
+            
+            <div class="x">
+              <h3>eliza</h3>
+              <h4>pleated plaid skirt</h4>
+              <h5>$35.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- skirt 2 -->
+        <div class="row2">
+    
+          <div class="itemlisting">
+            <img alt="image" src="images/skirt2.png" class="goodsimage"/>
+            <div class="x">
+              <h3>morticia</h3>
+              <h4>suede mini skirt</h4>
+              <h5>$45.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- skirt 3 -->
+        <div class="row2">
+    
+          <div class="itemlisting">
+            <img alt="image" src="images/skirt3.png" class="goodsimage"/>
+            <div class="x">
+              <h3>trinity</h3>
+              <h4>faux leather skirt</h4>
+              <h5>$40.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+    </div>
+</div>
+</div>
+
+<!-- gap -->
+<br><br>
+<hr class="mb-6"/>
+<br><br>
+
+<!-- dresses category -->
+<div class="row g-3 p-1">
+    <div class="col-sm-0 col-md-0 col-lg-2 side">
+    </div>
+    <div class="col-sm-5 col-md-5 col-lg-3 title">
+        <h1>dresses</h1>
+    </div>
+    <div class="col-sm-7 col-md-7 col-lg-7 three">
+    </div>
+</div>
+<br>
+
+<!-- dress items -->
+<div class="shop">
+    <div class="shop-goods">
+    <div class="rows">
+    
+        <!-- dress 1-->
+        <div class="row2">
+          <div class="itemlisting">
+            <img alt="image" src="images/dress1.png" class="goodsimage"/>
+            
+            <div class="x">
+              <h3>miranda</h3>
+              <h4>moss midi tier dress</h4>
+              <h5>$80.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- dress 2 -->
+        <div class="row2">
+    
+          <div class="itemlisting">
+            <img alt="image" src="images/dress2.png" class="goodsimage"/>
+            <div class="x">
+              <h3>sabrina</h3>
+              <h4>lace trim mini dress</h4>
+              <h5>$55.00</h5>
+            </div>
+    
+            <button class="add-to-cart">
+              <span class="atc-text"><span>add to cart</span></span>
+            </button>
+          </div>
+        </div>
+    
+        <!-- nonexistent -->
+        <div class="row2">
+    
+          <div class="itemlisting">
+          </div>
+        </div>
+    
+    </div>
+</div>
+</div>
+
+<!-- gap -->
+<br>
+<hr class="mb-6"/>
+
+<!-- footer -->
+<footer class="footer-one">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <p class="menu">
+                    <a href="instagram.com" style="text-decoration: none;">INSTAGRAM</a>
+                    <a href="facebook.com" style="text-decoration: none;">FACEBOOK</a>
+                    <a href="twitter.com" style="text-decoration: none;">TWITTER</a>
+                    <a href="faq.html" style="text-decoration: none;">FAQ</a>
+                    <a href="blog.html" style="text-decoration: none;">BLOG</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
