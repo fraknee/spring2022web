@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet/less" type="text/css" href="styles.less"/> 
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+
+<title>Animated Nav With GSAP 3.0</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="bars"></div>
+</div>
+
+<div class="text-box">
+    <p>hi i'm</p>
+    <h2>Francis Laura</h2>
+</div>
+
+<div class="search-wrap">
+<div class="input-wrap">
+    <input id="search-input" type="text" autocomplete="off" placeholder="Hover Me"/>
+    <button class="search-btn">
+    <div class="circle"></div>
+    <div class="line"></div>
+    </button>
+</div>
+</div>
+
+<nav>
+    <h2>Francis Laura</h2>
+    <div class="close">
+        <div></div>
+    </div>
+    <ul>
+        <li><a href="https://pronouny.xyz/u/fraknee" style="text-decoration: none;">Pronouns</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&id=1d-tBLwe6rRnO281h7r0fWhuPmB5Ox6Fv" style="text-decoration: none;">Resume</a></li>
+        <li><a href="https://francislaura.carrd.co" style="text-decoration: none;">Portfolio</a></li>
+        <li><a href="https://www.linkedin.com/in/francispalacio/" style="text-decoration: none;">LinkedIn</a></li>
+        <li><a href="mailto: fraknee17@gmail.com" style="text-decoration: none;">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>const open = document.querySelector('.container');
+    const close = document.querySelector('.close');
+    var tl = gsap.timeline({ defaults: { duration: 1, ease: 'expo.inOut' } });
+    open.addEventListener('click', () => {
+        if (tl.reversed()) {
+            tl.play();
+        } else {
+            tl.to('nav', { right: 0 })
+                .to('nav', { height: '100vh' }, '-=.1')
+                .to('nav ul li a', { opacity: 1, pointerEvents: 'all', stagger: .2 }, '-=.8')
+                .to('.close', { opacity: 1, pointerEvents: 'all' }, "-=.8")
+                .to('nav h2', { opacity: 1 }, '-=1');
+        }
+    });
+
+    close.addEventListener('click', () => {
+        tl.reverse();
+    });</script>
+<script>let searchBtn = document.getElementsByClassName("search-btn")[0];
+    let circle = searchBtn.getElementsByClassName("circle")[0];
+    let line = searchBtn.getElementsByClassName("line")[0];
+    let searchInput = document.getElementById("search-input");
+    let searchInputWrap = document.getElementsByClassName("input-wrap")[0];
+    
+    searchInput.onmouseenter = () => {
+        searchInput.focus();
+    };
+    
+    searchInput.onfocus = () => {
+        searchBtn.classList.remove("btn-back");
+        searchBtn.classList.add("btn-move");
+    
+        searchInput.classList.remove("input-blur");
+        searchInput.classList.add("input-focus");
+    
+        searchInputWrap.onmouseleave = () => {
+        if (searchInput.value) {
+            return;
+        }
+    
+        searchBtn.classList.remove("btn-move");
+        searchBtn.classList.add("btn-back");
+    
+        searchInput.blur();
+        searchInput.classList.remove("input-focus");
+        searchInput.classList.add("input-blur");
+        };
+    };
+    
+    searchInput.onblur = () => {
+        searchInputWrap.onmouseleave = null;
+    };
+    </script>
+</body>
+
+</html>
