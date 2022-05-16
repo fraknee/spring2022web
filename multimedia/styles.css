@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(198, 179, 168);
+}
+
+h1 {
+    font-size: 70px;
+    font-family: 'Koulen';
+}
+
+h2 {
+    font-family: 'Koulen';
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-image: url("avengers.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+.video, .map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: rgb(38, 19, 7);
+}
