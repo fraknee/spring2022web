@@ -464,6 +464,8 @@ img {
   }
 }
 
+
+
 @supports ((max-width: -webkit-max-content) or (max-width: -moz-max-content) or (max-width: max-content)) {
   .layout__item--figure {
     min-width: 15rem;
