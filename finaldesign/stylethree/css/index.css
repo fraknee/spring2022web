@@ -1,8 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches");
-body {
-  font-family: 'Staatliches', cursive;
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,7 +6,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #16a085;
+  background-color: #df7424;
   min-height: 100vh;
   min-width: 100vw;
 }

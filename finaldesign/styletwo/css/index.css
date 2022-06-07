@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 body {
-  font-family: 'Staatliches', cursive;
+  font-family: 'Bebas Neue', cursive;
 }
 
 body {
@@ -11,10 +11,26 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #16a085;
+          background: linear-gradient(-45deg, #18a085, #1eb395, #44d4b7, #15b2b2);
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+
   min-height: 100vh;
   min-width: 100vw;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 img {
   width: 300px;

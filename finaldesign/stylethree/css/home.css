@@ -1,8 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches");
-body {
-  font-family: 'Staatliches', cursive;
-}
-
 /* back button */
 body {
   display: -webkit-box;
@@ -190,8 +185,7 @@ h2,
 h3,
 h4 {
   line-height: 1.3;
-
-  color: black;
+  color: #df7424;
 }
 
 a {
@@ -259,7 +253,7 @@ img {
 
 .section-a h1 {
   font-size: 4rem;
-  color: var(--primary-color);
+  color: #df7424;
 }
 
 .section-a p {
@@ -293,7 +287,7 @@ img {
 }
 
 .section-b-inner h2 {
-  color: rgb(0, 0, 0);
+  color: #df7424;
   font-size: 3rem;
   margin-top: 1rem;
   text-align: center;
@@ -355,7 +349,7 @@ img {
 
 .btn {
   display: inline-block;
-  background: var(--primary-color);
+  background-color: #df7424;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -489,7 +483,7 @@ img {
 */
 .images h2 {
   margin-bottom: 0px;
-  color: white;
+  color: #df7424;
   padding-top: 30px;
   font-size: 27px;
   text-align: center;
@@ -497,72 +491,52 @@ img {
 
 
 /* footer */
-  .footer-contacts p span {
-    color: #3EC1D5;
-    font-weight: 700;
-  }
-  
-  .popular-tag ul li {
-    display: inline-block;
-  }
-  
-  .footer-content {
-    display: block;
-    overflow: hidden;
-  }
-  
-  .popular-tag ul li a:hover, 
-  .footer-icons ul li a:hover {
-    background: #3EC1D5;
-    border: 1px solid #3EC1D5;
-    color: rgb(146, 0, 0);
-  }
-  
-  .popular-tag ul li a {
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 30px;
-    color: rgb(255, 255, 255);
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    margin: 5px 3px;
-    padding: 5px 10px;
-    position: relative;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all 0.4s ease 0s;
-    width: 70px;
-    text-align: center;
-  }
-  
-  .footer-area-bottom {
-    background: #262626 none repeat scroll 0 0;
-    padding: 15px 0;
-  }
-  
-  .copyright-text a:hover {
-    text-decoration: underline;
-    color: #1d29b0;
-  }
-  
-  .copyright-text a {
-    color: rgb(255, 255, 255);
-  }
-  
-  .copyright> p {
-    margin-bottom: 0;
-    color: rgb(255, 255, 255);
-  }
-  
-  .credits {
-    padding-top: 5px;
-    text-align: center;
-  }
-  
-  .credits a {
-    color: rgb(255, 255, 255);
-  }
+.footer-contacts p span {
+  color: #3EC1D5;
+  font-weight: 700;
+}
+
+.popular-tag ul li {
+  display: inline-block;
+}
+
+.footer-content {
+  display: block;
+  overflow: hidden;
+}
+
+.footer-area-bottom {
+  background: #18a085 none repeat scroll 0 0;
+  padding: 15px 0;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+  color: #1d29b0;
+}
+
+.copyright-text a {
+  color: rgb(255, 255, 255);
+}
+
+.copyright p {
+  margin-bottom: 0;
+  color: rgb(255, 255, 255);
+}
+
+.credits {
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+}
+
+.credits a:hover {
+  color: #df7424;
+}
+
+.credits a {
+  color: rgb(255, 255, 255);
+}
 
 
 
-  

@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Josefin+Sans&family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 body {
-  font-family: 'Staatliches', cursive;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /* back button */
@@ -29,6 +29,7 @@ body footer {
 header .navigation .nav-items .nav-item {
   position: absolute;
   z-index: 1;
+  font-family: 'Bebas Neue', cursive;
 }
 
 header .navigation .nav-items .nav-item a {
@@ -190,6 +191,7 @@ h2,
 h3,
 h4 {
   line-height: 1.3;
+  font-family: 'Bebas Neue', cursive;
 }
 
 a {
@@ -245,7 +247,7 @@ img {
 
 .section-b {
   position: relative;
-  background-color: gray;
+  background-color: #e49e00;
   height: 1000px;
 }
 
@@ -278,59 +280,6 @@ img {
   margin-top: 1rem;
   font-size: 1.3rem;
   text-align: center;
-}
-
-.section-c .gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-.section-c .gallery a:first-child {
-  /* grid-row-start: 1;
-  grid-row-end: 3; */
-  grid-row: 1/3;
-  grid-column: 1/3;
-}
-
-.section-c .gallery a:nth-child(2) {
-  grid-column-start: 3;
-  grid-column-end: 5;
-}
-
-.section-c .gallery img,
-.section-c .gallery a {
-  width: 100%;
-  height: 100%;
-}
-
-.section-footer {
-  background: var(--primary-color);
-  color: #fff;
-  padding: 4rem 0;
-}
-
-.section-footer .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-}
-
-.section-footer h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.section-footer h3 {
-  margin-bottom: 0.7rem;
-}
-
-.section-footer a {
-  line-height: 1.9;
-  color: #ccc;
-}
-
-.section-footer a > i {
-  color: #555;
-  margin-right: 0.5rem;
 }
 
 .email-form {
@@ -532,6 +481,7 @@ img {
 h2 {
   font-size: 2em;
   line-height: 1.2;
+  color: #18a085;
 }
 
 .layout__item * + * {
@@ -554,9 +504,9 @@ h2 {
   --primary-dark: rgb(180, 180, 180);
   --primary-darkest: #545454;
   --input-placeholder: #474A59;
-  --input-text: #474A59;
+  --input-text: #18a085;
   --border-default: #000000;
-  --border-active: #275EFE;
+  --border-active: #18a085;;
   --background: #e2e2e5;
   --button-text: #474A59;
   --success: #474A59;
@@ -593,7 +543,6 @@ h2 {
   outline: none;
   display: block;
   border: none;
-  font-family: inherit;
   font-size: 15px;
   line-height: 24px;
 }
@@ -825,12 +774,22 @@ h2 {
   --button-cursor: pointer;
   --button-filter: grayscale(0%);
 }
-/*# sourceMappingURL=yer.css.map */
+/*# sourceMappingURL=yer.css.ma*/
 
 /* blog */
 .blogsite {
   padding: 140px;
   padding-bottom: 240px;
+}
+
+.blogsite h2 {
+  color: white;
+  text-shadow: 0px 0px 8px black;
+}
+
+.blogsite p {
+  color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
 .blogsite h3 {
@@ -895,8 +854,8 @@ button {
   height: 42px;
   text-transform: uppercase;
   font-weight: bold;
-  border: 1px solid #A6ACCD;
-  background-color: #A6ACCD;
+  border: 1px solid #18a085;
+  background-color: #18a085;
   color: #fff;
   margin-left: auto;
   margin-right: auto;
@@ -984,59 +943,17 @@ section article:nth-child(5) {
 
 
 /* footer */
-.footer-contacts p span {
-  color: #3EC1D5;
-  font-weight: 700;
-}
-
-.popular-tag ul li {
-  display: inline-block;
-}
-
 .footer-content {
   display: block;
   overflow: hidden;
 }
 
-.popular-tag ul li a:hover, 
-.footer-icons ul li a:hover {
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
-  color: rgb(146, 0, 0);
-}
-
-.popular-tag ul li a {
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 30px;
-  color: rgb(255, 255, 255);
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  margin: 5px 3px;
-  padding: 5px 10px;
-  position: relative;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.4s ease 0s;
-  width: 70px;
-  text-align: center;
-}
-
 .footer-area-bottom {
-  background: #262626 none repeat scroll 0 0;
+  background: #9e2c00 none repeat scroll 0 0;
   padding: 15px 0;
 }
 
-.copyright-text a:hover {
-  text-decoration: underline;
-  color: #1d29b0;
-}
-
-.copyright-text a {
-  color: rgb(255, 255, 255);
-}
-
-.copyright> p {
+.copyright p {
   margin-bottom: 0;
   color: rgb(255, 255, 255);
 }
@@ -1049,6 +966,11 @@ section article:nth-child(5) {
 .credits a {
   color: rgb(255, 255, 255);
 }
+
+.credits a:hover {
+  color: #f5d4ab;
+}
+
 
 
 

@@ -1,8 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches");
-body {
-  font-family: 'Staatliches', cursive;
-}
-
 /* back button */
 body {
   display: -webkit-box;
@@ -245,7 +240,7 @@ img {
 
 .section-b {
   position: relative;
-  background-color: gray;
+  background-color: #df7424;
   height: 1000px;
 }
 
@@ -467,6 +462,10 @@ img {
           align-items: center;
 }
 
+.layout h1 {
+  color: #df7424;
+}
+
 .layout:not(:first-of-type) {
   margin-top: 3em;
 }
@@ -481,6 +480,10 @@ img {
 .layout__item {
   padding-top: .1em;
   padding-left: 3.5em;
+}
+
+.layout__item h2 {
+  color: #df7424;
 }
 
 .layout__item--body {
@@ -895,8 +898,8 @@ button {
   height: 42px;
   text-transform: uppercase;
   font-weight: bold;
-  border: 1px solid #A6ACCD;
-  background-color: #A6ACCD;
+  border: 1px solid #df7424;
+  background-color: #df7424;
   color: #fff;
   margin-left: auto;
   margin-right: auto;
@@ -982,7 +985,6 @@ section article:nth-child(5) {
 }
 
 
-
 /* footer */
 .footer-contacts p span {
   color: #3EC1D5;
@@ -998,36 +1000,12 @@ section article:nth-child(5) {
   overflow: hidden;
 }
 
-.popular-tag ul li a:hover, 
-.footer-icons ul li a:hover {
-  background: #3EC1D5;
-  border: 1px solid #3EC1D5;
-  color: rgb(146, 0, 0);
-}
-
-.popular-tag ul li a {
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 30px;
-  color: rgb(255, 255, 255);
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  margin: 5px 3px;
-  padding: 5px 10px;
-  position: relative;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.4s ease 0s;
-  width: 70px;
-  text-align: center;
-}
-
 .footer-area-bottom {
-  background: #262626 none repeat scroll 0 0;
+  background: #18a085 none repeat scroll 0 0;
   padding: 15px 0;
 }
 
-.copyright-text a:hover {
+.copyright a:hover {
   text-decoration: underline;
   color: #1d29b0;
 }
@@ -1036,7 +1014,7 @@ section article:nth-child(5) {
   color: rgb(255, 255, 255);
 }
 
-.copyright> p {
+.copyright p {
   margin-bottom: 0;
   color: rgb(255, 255, 255);
 }
@@ -1044,6 +1022,11 @@ section article:nth-child(5) {
 .credits {
   padding-top: 5px;
   text-align: center;
+  color: white;
+}
+
+.credits a:hover {
+  color: #df7424;
 }
 
 .credits a {
