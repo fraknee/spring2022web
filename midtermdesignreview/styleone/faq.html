@@ -1,0 +1,514 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oswald&display=swap" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <title>the craft;</title>
+</head>
+
+<style>
+    .stuff {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 10px;
+        width: 850px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2)
+    }
+
+@media only screen and (max-width : 840px) {
+    .stuff {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 10px;
+        width: 550px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2)
+    }
+}
+
+    body {
+        background-color: black;
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+    }
+
+    hr { 
+        display: block; 
+        height: 1px;
+        border: 0; 
+        border-top: 1px solid #ccc;
+        margin: 1em 0; 
+        padding: 0; 
+    }
+
+    .jumbotron {
+        background-image: url("images/faq.png");
+        background-size: cover;
+    }
+    
+    .row-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content {
+        height: 100%;
+    } 
+
+    .mission {
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+/*contact*/
+    .form {
+        border-radius: 20px;
+        background-color: #ffffff;
+        background-clip: content-box;
+    }
+
+    .inputbox {
+        margin-bottom: 50px
+    }
+
+    .inputbox input {
+        position: absolute;
+        width: 300px;
+        background: transparent
+    }
+
+    .inputbox input:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #14492b;
+        outline: 0;
+        box-shadow: none
+    }
+
+    .inputbox span {
+        position: relative;
+        top: 7px;
+        left: 1px;
+        padding-left: 10px;
+        display: inline-block;
+        transition: 0.5s
+    }
+
+    .inputbox input:focus~span {
+        transform: translateX(-10px) translateY(-32px);
+        font-size: 12px
+    }
+
+    .inputbox input:valid~span {
+        transform: translateX(-10px) translateY(-32px);
+        font-size: 12px
+    }
+    .btn-custom {
+        background-color: #000000; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .title {
+        text-align: center;
+        color: black;
+        color: #ffffff;
+        font-family: 'Rubik Mono One', sans-serif;
+    }
+
+/*navbar css*/
+a {
+	color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding-right: 10px;
+	text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+a:hover {
+	color: rgb(148, 35, 35);
+}
+
+header {
+	background: rgb(0, 0, 0);
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#logo{
+    padding-left: 90px;
+    padding-top: 30px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+nav {
+	float: right;
+}
+
+ul {
+	list-style: none;
+  padding-right: 50px;
+}
+
+li {
+	display: inline-block;
+	padding-right: 40px
+}
+
+.current {
+	color: rgb(148, 35, 35);
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+	header {
+		position: absolute;
+	}
+
+	#menu-icon {
+		display:inline-block;
+	}
+
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #85E88D;
+		/*border: 2px solid #85E88D;*/
+		right: 00px;
+		top: 75px;
+		width: 50%;
+		/*border-radius: 4px 0 4px 4px;*/
+	}
+
+	nav li {
+		text-align: right;
+		width: 100%;
+		padding: 15px 0px;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+  
+  a:hover {
+	color: yellow;
+  }
+
+}
+
+/*footer css*/
+footer {
+        padding: 2em 0; 
+    }
+
+    .footer-one p {
+        color: rgb(167, 152, 152);;
+    }
+
+    .footer-one .footer-heading {
+        font-size: 30px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 30px; 
+    }
+
+    .footer-one .menu {
+        margin-bottom: 30px; 
+    }
+    
+    .footer-one .menu a {
+        color: rgb(167, 152, 152);
+        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px; 
+        font-family: 'Rubik Mono One', sans-serif;    }
+
+</style>
+
+<body>
+    
+<!-- logo + navigation -->
+<header>
+    <a href="landing.html" id="logo">the craft;</a>
+    <nav>
+      <a href="#" id="menu-icon"></a>
+      <ul>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="faq.html" class="current">Faq</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- gap -->
+<br><br><br>
+
+<!-- image -->
+<section class="jumbotron">
+    <div class="container">
+        <div class="row text-center">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+</section>
+
+<!-- gap -->
+<br><br>
+<hr class="mb-6"/>
+<br><br>
+
+<!-- FAQ dropdown + photos -->
+
+        <h1 class="title">faq</h1>
+        <p class="mission">our mission at <b><i>the craft;</i></b> is to ensure that all our coven sisters have the best shopping experience with us. please check out our FAQs, and if you don't find a solution to your problem, feel free to contact us!</p>
+        <div class="stuff">
+        <div class="card">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Shipping
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><b>WHERE WE SHIP TO</b>
+                                <ul>
+                                <li>We ship to most countries worldwide. If you live in a rural area or remote island; contact us first to make sure we can get your order to you safely.</li>
+                                </ul>   
+                            </li>
+<BR>
+                            <li><b>SHIPPING OPTIONS AND TIMESCALES</b>
+                                <ul>
+                                <li>Thanks to the global pandemic and high volume, we're hearing about delays from all of our carriers, including updates to their online tracking.</li>
+                                </ul>   
+                            </li>
+<br>
+                            <li><B>CUSTOMS/IMPORT AND SALES TAX</B>
+                                <ul>
+                                <li>You may be asked for an additional payment to receive your order if the delivery address of your order is outside of the US.</li>
+                                </ul>   
+                            </li>
+<br>
+                            <li><B>SHIPPING TRANSIT TIMES</B>
+                                <ul>
+                                <li>Thanks to the global pandemic and high volume, we're hearing about delays from all of our carriers, including updates to their online tracking.</li>
+                                </ul>   
+                            </li>
+                    </ul>                        
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Returns
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><B>HOW TO RETURN ITEMS</B>
+                                <ul>
+                                <li>Return shipping is payable by the customer so the choice of carrier/shipping method is at your discretion however we would always encourage you to choose a tracked option.</li>
+                                </ul>   
+                            </li>
+<br>
+                            <li><B>ITEMS THAT CANNOT BE RETURNED</B>
+                                <ul>
+                                <li>Swim and Bodysuits</li>
+                                <li>Earrings</li>
+                                <li>Lipsticks or cosmetics</li>
+                                </ul>   
+                            </li>
+<br>
+                            <li><b>TIMEFRAME FOR RETURNS</b>
+                                <ul>
+                                <li>You have 14 days from the date you received it to pop it in the post and send it back to us for a refund, store credit or exchange.</li>
+                                </ul>   
+                            </li>
+                    </ul>                        
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Other
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><B>SIZING</B>
+                                <ul>
+                                <li>We want you to receive an item that fits and have size guides available on most of our product pages to help you find the perfect fit, first time!</li>
+                                </ul>   
+                            </li>
+<br>
+                            <li><B>SOLD-OUT ITEMS</B>
+                                <ul>
+                                <li>Select the sold out item/size and check the message - if the item is due to come back in you will have the option to simply enter your email and we will email you once it's restocked.  If there is no option to sign up for restock notification then unfortunately this means we aren't planning on restocking it.</li>
+                                </ul>   
+                            </li>
+<br>
+                            <li><b>PRE-ORDER ITEMS</b>
+                                <ul>
+                                <li>Any order which includes pre-order items will only ship once all items are available. The estimated ship date for each pre-order item is detailed within the item description on the product page and is given and a guideline only. Orders are shipped by the chosen shipping method selected at checkout.</li>
+                                </ul>   
+                            </li>
+                        </ul>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div> 
+
+        <br>
+    </div>
+</div>
+
+
+<!-- gap -->
+<br><br>
+<hr class="mb-6"/>
+<br><br>
+
+<!-- contact title -->
+<div class="row g-3 p-1">
+    <div class="col-sm-0 col-md-1 col-lg-2 side">
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-3 title">
+        <h1>contact us</h1>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-7 side">
+    </div>
+</div>
+
+<!-- contact -->
+<div class="row">
+    <div class="col-sm-1 col-md-2 col-lg-3 side">
+    </div>
+    <div class="col-sm-10 col-md-8 col-lg-6 form">
+        <div class="container py-4">
+
+            <!-- Bootstrap 5 starter form -->
+            <form id="contactForm">
+        
+            <!-- Name input -->
+            <div class="mb-3">
+                <div class="inputbox">
+                <label class="form-label" for="name">full name</label>
+                <input class="form-control" id="name" type="text" placeholder="" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+            </div></div>
+        
+            <!-- Email address input -->
+            <div class="mb-3">
+                <div class="inputbox"> 
+                <label class="form-label" for="emailAddress">email</label>
+                <input class="form-control" id="emailAddress" type="email" placeholder="" data-sb-validations="required, email" />
+                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+            </div></div>
+        
+            <!-- Message input -->
+            <div class="mb-3">
+                <div class="inputbox"> 
+                <label class="form-label" for="message">message</label>
+                <textarea class="form-control" id="message" type="text" placeholder="" style="height: 10rem;" data-sb-validations="required"></textarea>
+                <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+            </div></div>
+        
+            <!-- form submissions success message -->
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">Form submission successful!</div>
+            </div>
+        
+            <!-- form submissions error message -->
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+        
+            <!-- form submit button -->
+            <div class="d-grid">
+                <button type="button" class="btn-custom" data-toggle="modal" data-target="#exampleModal">submit</button>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">we've received your message fellow starchild!</h5>
+                    </div>
+                    <div class="modal-body">
+                    the head mistress will get back to you within 3 business days. in the meantime, we hope you have a lovely day.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            </form>
+        
+        </div>
+    </div>
+    <div class="col-sm-1 col-md-2 col-lg-3 side">
+    </div>
+</div>
+
+<!-- gap -->
+<br><br><br><br>
+<hr class="mb-6"/>
+
+<!-- footer -->
+<footer class="footer-one">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <p class="menu">
+                    <a href="instagram.com" style="text-decoration: none;">INSTAGRAM</a>
+                    <a href="facebook.com" style="text-decoration: none;">FACEBOOK</a>
+                    <a href="twitter.com" style="text-decoration: none;">TWITTER</a>
+                    <a href="faq.html" style="text-decoration: none;">FAQ</a>
+                    <a href="blog.html" style="text-decoration: none;">BLOG</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
