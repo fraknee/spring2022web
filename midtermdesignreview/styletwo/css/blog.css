@@ -38,7 +38,6 @@ background-color: rgb(113, 7, 7);
     }
 
     .from {
-        font-family: 'Bebas Neue', cursive;
         font-size: 40px;
     }
 
@@ -59,7 +58,6 @@ background-color: rgb(113, 7, 7);
         text-align: center;
         color: black;
         color: #ffffff;
-        font-family: 'Rubik Mono One', sans-serif;
     }
 
     .highlight {
@@ -85,7 +83,6 @@ background-color: rgb(113, 7, 7);
         text-align: left;
         top: 70%; /* Adjust this value to move the positioned div up and down */
         background: rgba(255, 255, 255, 0.5);
-        font-family: Arial,sans-serif;
         color: rgb(0, 0, 0);
         width: 70%; /* Set the width of the positioned div */
         padding: 10px;
@@ -115,7 +112,6 @@ background-color: rgb(113, 7, 7);
         text-align: left;
         top: 10%; /* Adjust this value to move the positioned div up and down */
         background: rgba(0, 0, 0, 0.8);
-        font-family: Arial,sans-serif;
         color: #fff;
         width: 70%; /* Set the width of the positioned div */
         padding: 10px;
@@ -139,7 +135,6 @@ background-color: rgb(113, 7, 7);
 }
 
 .quote {
-    font-family: 'Rubik Mono One', sans-serif;
     color: white;
     font-size: 40px
 }
@@ -169,7 +164,6 @@ a {
   font-size: 20px;
   padding-right: 10px;
 	text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
 }
 
 a:hover {
@@ -191,7 +185,6 @@ header {
     padding-top: 30px;
     font-size: 30px;
     color: white;
-    font-family: 'Rubik Mono One', sans-serif;
 }
 
 nav {
@@ -280,11 +273,10 @@ footer {
         color: rgb(167, 152, 152);
         margin: 0 10px;
         text-transform: uppercase;
-        letter-spacing: 1px; 
-        font-family: 'Rubik Mono One', sans-serif;    }
+        letter-spacing: 1px;    
+      }
 
 .text {
-    font-family: 'Rubik Mono One', sans-serif;
     text-align: center;
     padding-left: 350px;
     padding-right: 350px;
@@ -292,7 +284,6 @@ footer {
 
 @media only screen and (max-width : 940px) {
     .text {
-        font-family: 'Rubik Mono One', sans-serif;
         text-align: center;
         padding-left: 50px;
         padding-right: 50px;
@@ -319,7 +310,6 @@ footer {
     margin-bottom: 1.6%;
     background: #fff;
     line-height: 1.4;
-    font-family: sans-serif;
     border-radius: 5px;
     overflow: hidden;
     z-index: 0;
@@ -390,19 +380,16 @@ footer {
   }
   
   .blog-card .details .author:before {
-    font-family: FontAwesome;
     margin-right: 10px;
     content: "\f007";
   }
   
   .blog-card .details .date:before {
-    font-family: FontAwesome;
     margin-right: 10px;
     content: "\f133";
   }
   
   .blog-card .details .tags ul:before {
-    font-family: FontAwesome;
     content: "\f02b";
     margin-right: 10px;
   }
@@ -424,7 +411,6 @@ footer {
   
   .blog-card .description h1,
   .blog-card .description h2 {
-    font-family: Poppins, sans-serif;
   }
   
   .blog-card .description h1 {
@@ -453,7 +439,6 @@ footer {
   
   .blog-card .description .read-more a:after {
     content: "\f061";
-    font-family: FontAwesome;
     margin-left: -10px;
     opacity: 0;
     vertical-align: middle;
