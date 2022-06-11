@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>the craft; products</title>
+
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/products.css">
+
+
+</head>
+<body>
+
+  <header>
+    <a href="landing.html" id="logo">the craft;</a>
+    <nav>
+      <a href="#" id="menu-icon"></a>
+      <ul>
+        <li><a href="products.html" class="current">Shop</a></li>
+        <li><a href="faq.html">Faq</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+<!-- partial:index.partial.html -->
+<div class="main-wrapper">
+  <div class="header"><h1>our products</h1></div>
+  <hr>
+  <div id="vue">
+    <cart :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax" :cart-total="cartTotal" :checkout-bool="checkoutBool"></cart>
+    <products :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax" :cart-total="cartTotal" :products-data="productsData"></products>
+    <checkout-area v-if="checkoutBool" :cart="cart" :tax="tax" :cart-sub-total="cartSubTotal" :cart-total="cartTotal" :products-data="productsData" :total-with-tax="totalWithTax"></checkout-area>
+  </div>
+</div>
+
+<!-- footer -->
+<hr>
+<footer class="footer-one">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+              <p class="menu">
+                  <a href="instagram.com" style="text-decoration: none;">INSTAGRAM</a>
+                  <a href="facebook.com" style="text-decoration: none;">FACEBOOK</a>
+                  <a href="twitter.com" style="text-decoration: none;">TWITTER</a>
+                  <a href="faq.html" style="text-decoration: none;">FAQ</a>
+                  <a href="blog.html" style="text-decoration: none;">BLOG</a>
+              </p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.11/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
