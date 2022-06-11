@@ -1,5 +1,5 @@
-    body {
-        background-color: black;
+            body {
+background-color: rgb(113, 7, 7);
         font-weight: 400;
         font-style:normal;
         text-decoration: none;
@@ -63,7 +63,7 @@
     }
 
     .highlight {
-        color:rgb(183, 15, 15);
+        color:rgb(0, 0, 0);
         background: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
         background-repeat: no-repeat;
         background-size: 130% 70%;
