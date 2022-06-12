@@ -19,7 +19,7 @@ body {
 }
 
 mark {
-  background-color: #f5d4ab;
+  background-color: #ffffff;
 }
 
 body header {
@@ -32,6 +32,7 @@ body footer {
 
 
 header .navigation .nav-items .nav-item {
+  list-style-type: none;
   position: absolute;
   z-index: 1;
   font-family: 'Bebas Neue', cursive;
@@ -56,7 +57,7 @@ header .navigation .nav-items .nav-item a span {
   display: block;
   color: black;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 1.33px;
   text-align: center;
   line-height: calc(30/16);

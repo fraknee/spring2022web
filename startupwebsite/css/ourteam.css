@@ -41,6 +41,29 @@ body {
 
 }
 
+@media (max-width:1100px) {
+  .section {
+    position: relative;
+    color: white;
+    padding-top: 1000px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }  
+} 
+
+@media (max-width:414) {
+  .section {
+    position: relative;
+    color: white;
+    padding-top: 1000px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }  
+} 
+
+
 .section[data-bg="yellow"] {
   color: #333;
 }
@@ -50,6 +73,7 @@ body header {
 }
 
 header .navigation .nav-items .nav-item {
+  list-style-type: none;
   position: absolute;
   z-index: 1;
   font-family: 'Bebas Neue', cursive;
@@ -74,7 +98,7 @@ header .navigation .nav-items .nav-item a span {
   display: block;
   color: white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 1.33px;
   text-align: center;
   line-height: calc(30/16);
@@ -232,6 +256,16 @@ main {
     margin-right: 40px;
     font-size: 1.2rem;
     text-align: justify;
+  }
+
+  @media (max-width:575px) {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 860px;
   }
 
 /* team */
@@ -496,7 +530,6 @@ main {
     .effect {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, .07);
     background-color: #18a085;
-    border: 5px solid #18a085;
     }
     
     .tab-container {
@@ -994,7 +1027,7 @@ main {
   @media (max-width: 767px) {
     .page {
       height: auto;
-      margin-top: 1800px;
+      margin-top: 100px;
       padding-bottom: 20px;
     }
   }

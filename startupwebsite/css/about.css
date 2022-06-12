@@ -27,6 +27,7 @@ body footer {
 
 
 header .navigation .nav-items .nav-item {
+  list-style-type: none;
   position: absolute;
   z-index: 1;
   font-family: 'Bebas Neue', cursive;
@@ -51,7 +52,7 @@ header .navigation .nav-items .nav-item a span {
   display: block;
   color: black;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 1.33px;
   text-align: center;
   line-height: calc(30/16);
@@ -776,6 +777,13 @@ h2 {
   --button-cursor: pointer;
   --button-filter: grayscale(0%);
 }
+
+@media screen and (max-width: 780px) {
+  .blogsite {
+    padding: 10px;
+  }
+}
+
 /*# sourceMappingURL=yer.css.ma*/
 
 /* blog */
@@ -931,7 +939,7 @@ section article:nth-child(5) {
     flex-direction: column;
   }
   section article {
-    width: 100%;
+    width: 200%;
     min-height: 250px;
   }
   section article:first-child {
